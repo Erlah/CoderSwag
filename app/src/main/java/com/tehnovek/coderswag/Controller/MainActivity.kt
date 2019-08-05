@@ -3,6 +3,7 @@ package com.tehnovek.coderswag.Controller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.tehnovek.coderswag.Adapters.CategoryAdapter
 import com.tehnovek.coderswag.Model.Category
 import com.tehnovek.coderswag.R
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         adapter = CategoryAdapter(this, DataService.categories)
         categoryListView.adapter = adapter
+        categoryListView.setOnItemClickListener { adapterView, view, i, l ->
+            val category = DataService.categories[i]
+            Toast.makeText(this, " Ты нажал на ячейку с ${category.title}", Toast.LENGTH_SHORT).show()
+        }
 
     }
 }

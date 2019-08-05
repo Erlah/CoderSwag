@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.tehnovek.coderswag.Model.Category
 import com.tehnovek.coderswag.R
 
@@ -59,3 +60,4 @@ class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapte
 
 
 }
+
